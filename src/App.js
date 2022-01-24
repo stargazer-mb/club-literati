@@ -11,13 +11,12 @@ import ContactUs from "./components/contactUs";
 import DeveloperInfo from "./components/developer";
 import Registration from "./components/registrations";
 
-import clblit from "../src/resources/imgs/clblit.jpg";
+import clblit from "../src/resources/imgs/clblit.png";
 import news from "./resources/imgs/news.jpg";
 
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
@@ -31,11 +30,11 @@ import ListItem from "@material-ui/core/ListItem";
 import HomeIcon from "@material-ui/icons/Home";
 import GroupIcon from "@material-ui/icons/Group";
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
-import PersonIcon from "@material-ui/icons/Person";
 import ListItemText from "@material-ui/core/ListItemText";
-import { Button, ButtonGroup, Grid, Paper } from "@material-ui/core";
+import { Paper, Grid } from "@material-ui/core";
 
 import "./App.css";
+import AnimatedText from "./components/animatedText";
 
 const drawerWidth = 248;
 
@@ -276,8 +275,8 @@ function App() {
               src={clblit}
               style={{
                 height: "4rem",
-                paddingInline: "10vw",
-                paddingBlock: "0.1rem",
+                display: "flex",
+                marginInline: "auto",
               }}
               alt='club-lit logo'
             />
@@ -372,17 +371,35 @@ function App() {
           <div className={classes.drawerHeader} />
           {home ? (
             <React.Fragment>
-              <div id='newsImgDiv'>
-                <Paper elevation={5} onClick={handleRegister}>
-                  {/* <a href='http://bit.ly/litfest2022' target='_blank'> */}
-                  <img
-                    src={news}
-                    style={{ height: "auto", maxWidth: "100%" }}
-                    alt='news'
-                    title='Click to Register'
-                  />
-                </Paper>
-              </div>
+              <Grid container>
+                <Grid item xs={12} md={6}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <AnimatedText
+                      txt='Club Literati'
+                      colors={["#ee9ca7", "#ffdde1", "#2193b0", "#6dd5ed"]}
+                    />
+                  </div>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <div id='newsImgDiv'>
+                    <Paper elevation={5} onClick={handleRegister}>
+                      {/* <a href='http://bit.ly/litfest2022' target='_blank'> */}
+                      <img
+                        src={news}
+                        style={{ height: "auto", maxWidth: "100%" }}
+                        alt='news'
+                        title='Click to Register'
+                      />
+                    </Paper>
+                  </div>
+                </Grid>
+              </Grid>
               <Home />
             </React.Fragment>
           ) : (
