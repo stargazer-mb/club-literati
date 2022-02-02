@@ -23,27 +23,23 @@ function LitFest() {
   const [about, setAbout] = useState(true);
   const [gallery, setGallery] = useState(false);
   const [highlights, setHighlights] = useState(false);
-  const [register, setRegister] = useState(false);
 
   const handleAbout = () => {
     setAbout(true);
     setGallery(false);
     setHighlights(false);
-    setRegister(false);
   };
 
   const handleGallery = () => {
     setAbout(false);
     setGallery(true);
     setHighlights(false);
-    setRegister(false);
   };
 
   const handleHighlights = () => {
     setAbout(false);
     setGallery(false);
     setHighlights(true);
-    setRegister(false);
   };
 
   return (
@@ -69,18 +65,18 @@ function LitFest() {
         </Paper>
 
         <Paper elevation={5} id='inPgNavBtn'>
-          <Button color='primary' variant='contained' onClick={handleGallery}>
-            Gallery
-          </Button>
-        </Paper>
-
-        <Paper elevation={5} id='inPgNavBtn'>
           <Button
             color='primary'
             variant='contained'
             onClick={handleHighlights}
           >
             Highlights
+          </Button>
+        </Paper>
+
+        <Paper elevation={5} id='inPgNavBtn'>
+          <Button color='primary' variant='contained' onClick={handleGallery}>
+            Gallery
           </Button>
         </Paper>
       </div>
@@ -126,26 +122,6 @@ function LitFest() {
         <Typography paragraph>
           highlights
           <br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-          dolor purus non enim praesent elementum facilisis leo vel. Risus at
-          ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-          quisque non tellus. Convallis convallis tellus id interdum velit
-          laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-          adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-          integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-          eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-          quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-          vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-          lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-          faucibus et molestie ac.
-        </Typography>
-      ) : (
-        ""
-      )}
-      {register ? (
-        <Typography paragraph>
-          Registration <br />
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
           dolor purus non enim praesent elementum facilisis leo vel. Risus at
