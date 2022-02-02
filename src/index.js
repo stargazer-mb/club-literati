@@ -1,27 +1,24 @@
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "./App.jsx";
+import { red, yellow } from "@material-ui/core/colors";
 
 const theme = createTheme({
   palette: {
-    primary: { main: "#e6e6e9" },
-    secondary: { main: "#f99fff" },
-    litFest: {
-      primary: { main: "orange" },
-      secondary: { main: "yellow" },
+    primary: {
+      main: red[500],
+      litFest: yellow[700],
+      tedx: "red",
+      mun: "blue",
+      murdmyst: "green",
     },
-    tedx: {
-      primary: { main: "#red" },
-      secondary: { main: "#black" },
-    },
-    mun: {
-      primary: { main: "#blue" },
-      secondary: { main: "#white" },
-    },
-    murdmyst: {
-      primary: { main: "green" },
-      secondary: { main: "#yellow" },
+    secondary: {
+      main: "#f99fff",
+      litFest: "yellow",
+      tedx: "black",
+      mun: "white",
+      murdmyst: "yellow",
     },
   },
   typography: {
@@ -41,10 +38,8 @@ const theme = createTheme({
 });
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>,
   document.getElementById("root")
 );

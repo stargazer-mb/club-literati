@@ -31,10 +31,10 @@ import HomeIcon from "@material-ui/icons/Home";
 import GroupIcon from "@material-ui/icons/Group";
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 import ListItemText from "@material-ui/core/ListItemText";
-import { Paper, Grid } from "@material-ui/core";
+import { Paper, Grid, Button } from "@material-ui/core";
 
 import "./App.css";
-import AnimatedText from "./components/animatedText";
+import AnimatedText from "./components/Reusable Components/animatedText";
 
 const drawerWidth = 248;
 
@@ -252,123 +252,116 @@ function App() {
   };
 
   return (
-    <React.Fragment>
-      <div className='root'>
-        {/* <CssBaseline /> */}
-        <AppBar
-          position='fixed'
-          className={clsx(classes.appBar, {
-            [classes.appBarShift]: open,
-          })}
-        >
-          <Toolbar>
-            <IconButton
-              color='inherit'
-              aria-label='open drawer'
-              onClick={handleDrawerOpen}
-              edge='start'
-              className={clsx(classes.menuButton, open && classes.hide)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <img
-              src={clblit}
-              style={{
-                height: "4rem",
-                display: "flex",
-                marginInline: "auto",
-              }}
-              alt='club-lit logo'
-            />
-          </Toolbar>
-        </AppBar>
-        <Drawer
-          className={classes.drawer}
-          variant='persistent'
-          anchor='left'
-          open={open}
-          classes={{
-            paper: classes.drawerPaper,
-          }}
-        >
-          <div className={classes.drawerHeader}>
-            <IconButton onClick={handleDrawerClose}>
-              {theme.direction === "ltr" ? (
-                <ChevronLeftIcon />
-              ) : (
-                <ChevronRightIcon />
-              )}
-            </IconButton>
-          </div>
-          <Divider />
-          <List>
-            <ListItem button onClick={handleHome}>
-              <HomeIcon style={{ paddingRight: "0.25rem" }} fontSize='medium' />
-              <ListItemText primary={"Home"} />
-            </ListItem>
-          </List>
-          <Divider />
-          <List>
-            <ListItem button onClick={handleTedx}>
-              <ListItemText primary={"TEDxMLRIT"} />
-            </ListItem>
-            <ListItem button onClick={handleMun}>
-              <ListItemText primary={"Model United Nations"} />
-            </ListItem>
-            <ListItem button onClick={handleLitFest}>
-              <ListItemText primary={"Literary Festival"} />
-            </ListItem>
-            <ListItem
-              button
-              onClick={handleRegister}
-              className={classes.registerBtn}
-            >
-              <ListItemText
-                primary={"Registrations Open!"}
-                className={classes.registerBtnText}
-              />
-            </ListItem>
-            <ListItem button onClick={handleMurderMyst}>
-              <ListItemText primary={"Murder Mystery"} />
-            </ListItem>
-          </List>
-          <Divider />
-          <List>
-            <ListItem button onClick={handleTeamLit}>
-              <GroupIcon
-                style={{ paddingRight: "0.25rem" }}
-                fontSize='medium'
-              />
-              <ListItemText primary={"Team Literati"} />
-            </ListItem>
-            <ListItem button onClick={handleContact}>
-              <AlternateEmailIcon
-                style={{ paddingRight: "0.25rem" }}
-                fontSize='medium'
-              />
-              <ListItemText primary={"Contact / Follow Us"} />
-            </ListItem>
-            <ListItem button onClick={handleDeveloper}>
-              <ChevronLeftIcon fontSize='small' />
-              {/* <PersonIcon fontSize='small' /> */}
-              <Typography variant='h6'>/</Typography>
-              <ChevronRightIcon fontSize='small' />
-              <ListItemText primary={"Developer Info"} />
-            </ListItem>
-            <Divider />
-          </List>
+    <div className='mainRoot'>
+      {/* <CssBaseline /> */}
+      <AppBar
+        position='fixed'
+        className={clsx(classes.appBar, {
+          [classes.appBarShift]: open,
+        })}
+      >
+        <Toolbar>
+          <IconButton
+            color='inherit'
+            aria-label='open drawer'
+            onClick={handleDrawerOpen}
+            edge='start'
+            className={clsx(classes.menuButton, open && classes.hide)}
+          >
+            <MenuIcon />
+          </IconButton>
           <img
             src={clblit}
-            style={{ paddingBlock: "1rem" }}
-            alt='clu-lit img'
+            style={{
+              height: "4rem",
+              display: "flex",
+              marginInline: "auto",
+            }}
+            alt='club-lit logo'
           />
-        </Drawer>
-        <main
-          className={clsx(classes.content, {
-            [classes.contentShift]: open,
-          })}
-        >
-          <div className={classes.drawerHeader} />
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        className={classes.drawer}
+        variant='persistent'
+        anchor='left'
+        open={open}
+        classes={{
+          paper: classes.drawerPaper,
+        }}
+      >
+        <div className={classes.drawerHeader}>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === "ltr" ? (
+              <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
+            )}
+          </IconButton>
+        </div>
+        <Divider />
+        <List>
+          <ListItem button onClick={handleHome}>
+            <HomeIcon style={{ paddingRight: "0.25rem" }} fontSize='medium' />
+            <ListItemText primary={"Home"} />
+          </ListItem>
+        </List>
+        <Divider />
+        <List>
+          <ListItem button onClick={handleTedx}>
+            <ListItemText primary={"TEDxMLRIT"} />
+          </ListItem>
+          <ListItem button onClick={handleMun}>
+            <ListItemText primary={"Model United Nations"} />
+          </ListItem>
+          <ListItem button onClick={handleLitFest}>
+            <ListItemText primary={"Literary Festival"} />
+          </ListItem>
+          <ListItem
+            button
+            onClick={handleRegister}
+            className={classes.registerBtn}
+          >
+            <ListItemText
+              primary={"Registrations Open!"}
+              className={classes.registerBtnText}
+            />
+          </ListItem>
+          <ListItem button onClick={handleMurderMyst}>
+            <ListItemText primary={"Murder Mystery"} />
+          </ListItem>
+        </List>
+        <Divider />
+        <List>
+          <ListItem button onClick={handleTeamLit}>
+            <GroupIcon style={{ paddingRight: "0.25rem" }} fontSize='medium' />
+            <ListItemText primary={"Team Literati"} />
+          </ListItem>
+          <ListItem button onClick={handleContact}>
+            <AlternateEmailIcon
+              style={{ paddingRight: "0.25rem" }}
+              fontSize='medium'
+            />
+            <ListItemText primary={"Contact / Follow Us"} />
+          </ListItem>
+          <ListItem button onClick={handleDeveloper}>
+            <ChevronLeftIcon fontSize='small' />
+            {/* <PersonIcon fontSize='small' /> */}
+            <Typography variant='h6'>/</Typography>
+            <ChevronRightIcon fontSize='small' />
+            <ListItemText primary={"Developer Info"} />
+          </ListItem>
+          <Divider />
+        </List>
+        <img src={clblit} style={{ paddingBlock: "1rem" }} alt='clu-lit img' />
+      </Drawer>
+      <main
+        className={clsx(classes.content, {
+          [classes.contentShift]: open,
+        })}
+      >
+        <div className={classes.drawerHeader} />
+        <div style={{}}>
           {home ? (
             <React.Fragment>
               <Grid container>
@@ -381,7 +374,7 @@ function App() {
                     }}
                   >
                     <AnimatedText
-                      txt='Club Literati'
+                      txt='CLUB LITERATI'
                       colors={["#ee9ca7", "#ffdde1", "#2193b0", "#6dd5ed"]}
                     />
                   </div>
@@ -414,15 +407,21 @@ function App() {
           {developer ? <DeveloperInfo /> : ""}
           {register ? (
             <React.Fragment>
-              <div onClick={handleHome}>Back</div>
+              <Button
+                onClick={handleHome}
+                startIcon={<ChevronLeftIcon />}
+                color='secondary'
+              >
+                Back
+              </Button>
               <Registration />
             </React.Fragment>
           ) : (
             ""
           )}
-        </main>
-      </div>
-    </React.Fragment>
+        </div>
+      </main>
+    </div>
   );
 }
 

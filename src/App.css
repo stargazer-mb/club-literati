@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap");
+
 @media screen and (min-width: 421px) {
-  .root {
+  .mainRoot {
     /* background-image: linear-gradient(red, yellow); */
     display: flex;
     font-size: large;
+    /* justify-content: space-around; */
   }
 
   #inPgNav {
@@ -43,22 +46,19 @@
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
   }
-
-  #eventCardImg {
-    max-height: 30vh;
-  }
 }
 
 @media screen and (max-width: 420px) {
-  .root {
+  .mainRoot {
     display: flex;
     overflow: auto;
-    justify-content: flex-start;
-    align-items: center;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    margin-left: auto;
     font-size: small;
     /* object-fit: cover; */
     /* background-image: linear-gradient(magenta, rgb(101, 29, 101)); */
-    /* background-image: radial-gradient(rgb(0, 255, 247), rgb(0, 85, 255)); */
+    /* background-image: radial-gradient(rgb(0, 229, 255), rgb(0, 21, 255)); */
     /* background-color: rgb(174, 255, 240); */
   }
   #inPgNav {
@@ -91,16 +91,12 @@
   }
 
   #contentHead {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Playfair Display", serif;
     font-weight: 800;
   }
 
   #contentBody {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Playfair Display", serif;
     font-style: italic;
-  }
-
-  #eventCardImg {
-    max-width: 70vw;
   }
 }
