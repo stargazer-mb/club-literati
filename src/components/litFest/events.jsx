@@ -1,29 +1,63 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
-import EventCard from "./eventCard";
+import { Grid, Typography } from "@material-ui/core";
+import EventCard from "../Reusable Components/eventCard";
 import SlamPoetryImg from "../../resources/report msgs/cs1.jpg";
 import LitriviaImg from "../../resources/report msgs/cs2.jpg";
 
 export default function Events() {
   return (
     <React.Fragment>
-      <Typography paragraph>
-        Events
+      <Typography>Events</Typography>
+      <Grid container>
+        <EventCard
+          title='Find Your Voice'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.'
+          image={SlamPoetryImg}
+        />
         <EventCard
           title='Slam Poetry'
           content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget.'
-          image={
-            <img src={SlamPoetryImg} alt='Slam Poetry' id='eventCardImg'></img>
-          }
+          image={SlamPoetryImg}
         />
         <EventCard
           title='Litrivia'
           content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget.'
-          image={<img src={LitriviaImg} alt='Litrivia' id='eventCardImg'></img>}
+          image={LitriviaImg}
         />
-      </Typography>
+        <EventCard
+          title='Bookathon'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.'
+          image={LitriviaImg}
+        />
+        <EventCard
+          title='Screen Battles'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.'
+          image={LitriviaImg}
+        />
+        <EventCard
+          title='Photography Contest'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.'
+          image={SlamPoetryImg}
+        />
+        <EventCard
+          title='Treasure Hunt'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.'
+          image={LitriviaImg}
+        />
+        <EventCard
+          title='BBDM'
+          content='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget.'
+          image={LitriviaImg}
+        />
+      </Grid>
     </React.Fragment>
   );
 }
