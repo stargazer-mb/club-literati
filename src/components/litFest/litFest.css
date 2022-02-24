@@ -1,11 +1,11 @@
-@media screen and (min-width: 421px) {
+@media screen and (min-width: 451px) {
   #litFestRoot {
     background-color: cornflowerblue;
     padding: 24px;
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   #litFestRoot {
     background-color: coral;
     padding: 24px;
