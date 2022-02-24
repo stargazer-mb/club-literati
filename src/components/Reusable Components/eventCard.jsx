@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   rootPC: {
     maxWidth: 345,
+    margin: "1rem",
   },
   media: {
     height: 140,
