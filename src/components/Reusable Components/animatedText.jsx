@@ -17,7 +17,7 @@ export default function AnimatedText(props) {
 
   let colorStr = props.colors.join(",");
 
-  const AnimGradText = styled.h1`
+  const AnimGradText = styled(props.variant)`
     animation: ${gradient} 5s ease-in-out infinite;
     background: linear-gradient(to right, ${colorStr});
     background-size: 300%;
