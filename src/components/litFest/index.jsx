@@ -1,21 +1,14 @@
-import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core";
-import {
-  Button,
-  ButtonGroup,
-  Typography,
-  Grid,
-  Paper,
-} from "@material-ui/core";
-import news from "../../resources/imgs/parallax/lit fest.jpg";
-import Events from "./events";
+import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core';
+import { Button, Typography, Paper } from '@material-ui/core';
+import news from '../../resources/imgs/parallax/lit fest.jpg';
+import Events from './events';
+import Highlights from './highlights';
+import Gallery from '../Reusable Components/gallery';
 
-const useStyles = makeStyles((theme) => ({
-  picture: {
-    display: "grid",
-    justifyContent: "center",
-  },
-}));
+import './litFest.css';
+
+const useStyles = makeStyles((theme) => ({}));
 
 function LitFest() {
   const classes = useStyles();
@@ -43,13 +36,13 @@ function LitFest() {
   };
 
   return (
-    <React.Fragment>
+    <div id='litFestRoot'>
       <div id='newsImgDiv'>
         <Paper>
           <a href='http://bit.ly/litfest2022' target='_blank'>
             <img
               src={news}
-              style={{ height: "auto", maxWidth: "100%" }}
+              style={{ height: 'auto', maxWidth: '100%' }}
               alt='news'
               title='Click to Register'
             />
@@ -58,13 +51,13 @@ function LitFest() {
       </div>
 
       <div id='inPgNav'>
-        <Paper elevation={5} id='inPgNavBtn'>
+        <Paper elevation={0} id='inPgNavBtn'>
           <Button color='primary' variant='contained' onClick={handleAbout}>
             About
           </Button>
         </Paper>
 
-        <Paper elevation={5} id='inPgNavBtn'>
+        <Paper elevation={0} id='inPgNavBtn'>
           <Button
             color='primary'
             variant='contained'
@@ -74,7 +67,7 @@ function LitFest() {
           </Button>
         </Paper>
 
-        <Paper elevation={5} id='inPgNavBtn'>
+        <Paper elevation={0} id='inPgNavBtn'>
           <Button color='primary' variant='contained' onClick={handleGallery}>
             Gallery
           </Button>
@@ -96,50 +89,20 @@ function LitFest() {
           <Events />
         </React.Fragment>
       ) : (
-        ""
+        ''
       )}
       {gallery ? (
-        <Typography paragraph>
-          Gallery <br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-          dolor purus non enim praesent elementum facilisis leo vel. Risus at
-          ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-          quisque non tellus. Convallis convallis tellus id interdum velit
-          laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-          adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-          integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-          eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-          quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-          vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-          lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-          faucibus et molestie ac.
-        </Typography>
+        <React.Fragment>
+          <Typography paragraph>
+            Gallery <br />
+          </Typography>
+          <Gallery imgList={[]} />
+        </React.Fragment>
       ) : (
-        ""
+        ''
       )}
-      {highlights ? (
-        <Typography paragraph>
-          highlights
-          <br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-          dolor purus non enim praesent elementum facilisis leo vel. Risus at
-          ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-          quisque non tellus. Convallis convallis tellus id interdum velit
-          laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-          adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-          integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-          eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-          quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-          vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-          lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-          faucibus et molestie ac.
-        </Typography>
-      ) : (
-        ""
-      )}
-    </React.Fragment>
+      {highlights ? <Highlights /> : ''}
+    </div>
   );
 }
 

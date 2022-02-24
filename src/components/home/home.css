@@ -1,0 +1,20 @@
+@media screen and (min-width: 421px) {
+  #homeContentDiv {
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    margin-block: 1rem;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #homeContentDiv {
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    margin-block: 1rem;
+    max-width: 300px;
+    top: 10px;
+  }
+}
