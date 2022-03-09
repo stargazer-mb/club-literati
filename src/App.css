@@ -68,7 +68,7 @@
     font-size: small;
     /* object-fit: cover; */
     /* background-image: linear-gradient(magenta, rgb(101, 29, 101)); */
-    background-image: radial-gradient(rgb(0, 229, 255), rgb(0, 21, 255));
+    /* background-image: radial-gradient(rgb(0, 229, 255), rgb(0, 21, 255)); */
     /* background-color: rgb(174, 255, 240); */
     z-index: 1;
     position: absolute;
@@ -83,9 +83,14 @@
     padding-block: 5px;
     overflow: auto;
     white-space: nowrap;
-    max-width: 85vw;
+    max-width: 99%;
     justify-content: center;
   }
+
+  #inPgNavContainer {
+    width: 100%;
+  }
+
   #inPgNavBtn {
     margin: 5px;
     display: inline;

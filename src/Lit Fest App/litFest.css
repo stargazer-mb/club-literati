@@ -1,0 +1,11 @@
+@media screen and (min-width: 451px) {
+  #litFestRoot {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #litFestRoot {
+    padding: 24px;
+  }
+}

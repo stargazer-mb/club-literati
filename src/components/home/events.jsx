@@ -19,7 +19,7 @@ import litFestbg from '../../resources/imgs/parallax/bg3.jpg';
 
 import tedx from '../../resources/imgs/tedx/tedxmlrit.jpg';
 import mun from '../../resources/imgs/mun/mun.jpg';
-import litfest from '../../resources/imgs/lit fest/lit fest.jpg';
+import litfest from '../../resources/imgs/lit fest/Lit Fest Logo.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {

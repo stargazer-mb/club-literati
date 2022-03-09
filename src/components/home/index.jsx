@@ -9,7 +9,7 @@ import './home.css';
 
 import test1 from '../../resources/imgs/news.jpg';
 import test2 from '../../resources/imgs/tedx/tedxmlrit.jpg';
-import test3 from '../../resources/imgs/lit fest/lit fest.jpg';
+import test3 from '../../resources/imgs/lit fest/Lit Fest Logo.png';
 import test4 from '../../resources/imgs/parallax/bg1.jpg';
 import test5 from '../../resources/imgs/parallax/bg2.jpg';
 import test6 from '../../resources/imgs/parallax/bg3.jpg';
@@ -17,7 +17,7 @@ import test7 from '../../resources/imgs/mun/mun.jpg';
 import test8 from '../../resources/imgs/clblit.png';
 import test9 from '../../resources/imgs/news.jpg';
 import test10 from '../../resources/imgs/tedx/tedxmlrit.jpg';
-import test11 from '../../resources/imgs/lit fest/lit fest.jpg';
+import test11 from '../../resources/imgs/lit fest/Lit Fest Logo.png';
 import test12 from '../../resources/imgs/parallax/bg1.jpg';
 import test13 from '../../resources/imgs/parallax/bg2.jpg';
 import test14 from '../../resources/imgs/parallax/bg3.jpg';
