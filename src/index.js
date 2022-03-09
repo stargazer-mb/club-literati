@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import App from './App.jsx';
 import { red, yellow } from '@material-ui/core/colors';
 
+import LitFestApp from './Lit Fest App/litFestApp';
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -39,7 +41,7 @@ const theme = createTheme({
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <App />
+    <LitFestApp />
   </ThemeProvider>,
   document.getElementById('root')
 );
