@@ -1,6 +1,6 @@
 import { Divider, Grid, Link, Typography } from '@material-ui/core';
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Paper } from '@material-ui/core';
 
 let useStyles = makeStyles((theme) => ({
   container: {},
@@ -24,8 +24,6 @@ function Registration() {
   let classes = useStyles();
   return (
     <React.Fragment>
-      <Typography>Registrations</Typography>
-      <Divider />
       <Grid container className={classes.container}>
         <Grid item xs={12} md={6}>
           <Link
@@ -34,7 +32,7 @@ function Registration() {
             rel='noopener'
             color='inherit'
           >
-            <div className={classes.button}>Art Gallery</div>
+            <Paper className={classes.button}>Art Gallery</Paper>
           </Link>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -44,7 +42,7 @@ function Registration() {
             rel='noopener'
             color='inherit'
           >
-            <div className={classes.button}>Individual Events</div>
+            <Paper className={classes.button}>Individual Events</Paper>
           </Link>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -54,12 +52,17 @@ function Registration() {
             rel='noopener'
             color='inherit'
           >
-            <div className={classes.button}>Group Events</div>
+            <Paper className={classes.button}>Group Events</Paper>
           </Link>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Link href='' target='_blank' rel='noopener' color='inherit'>
-            <div className={classes.button}>Event Brochure</div>
+          <Link
+            href='https://drive.google.com/file/d/1YturquQ13PaCLED_axxFrv964bnI_o92/view?usp=sharing'
+            target='_blank'
+            rel='noopener'
+            color='inherit'
+          >
+            <Paper className={classes.button}>Event Brochure</Paper>
           </Link>
         </Grid>
       </Grid>

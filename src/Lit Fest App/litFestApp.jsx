@@ -11,7 +11,7 @@ import Info from './info';
 
 import clblit from '../resources/imgs/clblit.png';
 import news from '../resources/imgs/lit fest/Lit Fest Logo.png';
-import titlebg from '../resources/backgrounds/try5.jpg';
+import titlebg from '../resources/backgrounds/bg8.jpg';
 import appbg from '../resources/backgrounds/tex4.jpg';
 import infobg from '../resources/backgrounds/tex3.jpg';
 import litFestPoster from '../resources/imgs/lit fest/Lit Fest Logo.png';
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#ffffff',
   },
   // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
+  // toolbar: theme.mixins.toolbar,
   content: {
     // flexGrow: 1,
     paddingTop: theme.spacing(2),
@@ -61,6 +61,8 @@ export default function LitFestApp() {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Parallax bgImage={titlebg} strength={-600} blur={{ min: -1, max: 3 }}>
+          {' '}
+          {/*blur={{ min: -1, max: 3 }}*/}
           <div
             style={{
               height: '100vh',
@@ -73,15 +75,21 @@ export default function LitFestApp() {
                 color: 'white',
                 position: 'absolute',
                 minWidth: '80%',
-                top: '50%',
+                top: '55%',
                 left: '50%',
                 transform: 'translate(-50%,-50%)',
                 textAlign: 'center',
               }}
             >
-              <Typography>
-                content lorem ipsum dolor amet (intro) lorem ipsum dolor amet
-                lorem ipsum dolor amet lorem ipsum dolor amet
+              <Typography
+                style={{
+                  fontFamily: 'Permanent Marker, cursive',
+                  fontSize: '1.4rem',
+                  fontWeight: '100',
+                }}
+              >
+                Uninterrupted joyous festivities power-packed into a one-day
+                glorious event presented by your very own <br /> CLUB LITERATI
               </Typography>
               {/* <div
                 style={{
@@ -107,10 +115,17 @@ export default function LitFestApp() {
               <div>
                 <Grid container>
                   <Hidden smDown>
-                    <Grid item md={3}></Grid>
+                    <Grid item md={2}></Grid>
                   </Hidden>
-                  <Grid item xs={12} md={3} style={{ paddingBottom: '0.5rem' }}>
-                    <Typography>
+                  <Grid item xs={12} md={5} style={{ paddingBottom: '0.5rem' }}>
+                    <Typography
+                      style={{
+                        fontFamily: 'Permanent Marker, cursive',
+                        fontSize: '1.4rem',
+                        fontWeight: '100',
+                        color: 'black',
+                      }}
+                    >
                       <Link
                         href='https://goo.gl/maps/kKxYrTPiHkzdxJqKA'
                         target='_blank'
@@ -126,8 +141,15 @@ export default function LitFestApp() {
                     </Typography>
                   </Grid>
                   <Grid item xs={12} md={3} style={{ paddingBottom: '0.5rem' }}>
-                    <Typography>
-                      <Link href='' rel='noopener' color='inherit' download>
+                    <Typography
+                      style={{
+                        fontFamily: 'Permanent Marker, cursive',
+                        fontSize: '1.4rem',
+                        fontWeight: '100',
+                        color: 'black',
+                      }}
+                    >
+                      <Link href='' rel='noopener' color='inherit'>
                         <Event
                           fontSize='inherit'
                           style={{ marginBottom: '-0.1rem' }}
@@ -137,13 +159,14 @@ export default function LitFestApp() {
                     </Typography>
                   </Grid>
                   <Hidden smDown>
-                    <Grid item md={3}></Grid>
+                    <Grid item md={2}></Grid>
                   </Hidden>
                 </Grid>
               </div>
               <div
                 style={{
                   backgroundColor: 'inherit',
+                  // backgroundColor: 'black',
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
