@@ -1,7 +1,7 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import RadioButtonCheckedIcon from "@material-ui/icons/RadioButtonChecked";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import {
   Hidden,
   Accordion,
@@ -15,33 +15,33 @@ import {
   CardContent,
   CardMedia,
   Button,
-} from "@material-ui/core";
+} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   rootMob: {
-    width: "100%",
-    marginBlock: "0.5rem",
+    width: '100%',
+    marginBlock: '0.5rem',
     // border: "solid 1px blue",
     // borderRadius: "1rem",
   },
   heading: {
     // fontSize: theme.typography.pxToRem(15),
     // fontWeight: theme.typography.fontWeightRegular,
-    marginLeft: "0.75rem",
+    marginLeft: '0.75rem',
   },
   content: {
-    marginLeft: "0.5rem",
+    marginLeft: '0.5rem',
   },
   rootPC: {
     maxWidth: 345,
-    margin: "1rem",
+    margin: '1rem',
   },
   media: {
-    height: 140,
+    height: 200,
   },
   btn: {
     color: theme.palette.primary.litFest,
-    marginLeft: "0.5rem",
+    marginLeft: '0.5rem',
   },
 }));
 
@@ -53,16 +53,16 @@ export default function EventCard(props) {
       <Hidden smUp>
         <Grid item xs={12}>
           <div className={classes.rootMob}>
-            <Accordion style={{ borderRadius: "2rem" }}>
+            <Accordion
+              style={{ borderRadius: '2rem', backgroundColor: props.bgColor }}
+            >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls='panel1a-content'
                 id='panel1a-header'
               >
-                {/* <PlayArrowIcon /> */}
-                {/* <RadioButtonUncheckedIcon /> */}
-                <RadioButtonCheckedIcon />
-                <Typography className={classes.heading}>
+                <RadioButtonCheckedIcon style={{ color: props.fontColor }} />
+                <Typography style={{ marginLeft: '0.75rem' }}>
                   {props.title}
                 </Typography>
               </AccordionSummary>
@@ -72,18 +72,18 @@ export default function EventCard(props) {
                     item
                     xs={12}
                     style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
                     }}
                   >
                     <img
                       src={props.image}
                       alt='event'
                       style={{
-                        marginBottom: "1rem",
-                        maxWidth: "70vw",
-                        maxHeight: "100%",
+                        marginBottom: '1rem',
+                        maxWidth: '70vw',
+                        maxHeight: '100%',
                       }}
                     />
                   </Grid>
@@ -93,7 +93,14 @@ export default function EventCard(props) {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Button size='small' className={classes.btn}>
+                    <Button
+                      size='small'
+                      style={{
+                        marginLeft: '0.5rem',
+                        marginTop: '0.5rem',
+                        color: props.fontColor,
+                      }}
+                    >
                       Learn More
                     </Button>
                   </Grid>

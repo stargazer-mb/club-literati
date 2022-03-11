@@ -5,6 +5,7 @@ import {
   Grid,
   Hidden,
   IconButton,
+  Link,
 } from '@material-ui/core';
 import {
   Facebook,
@@ -36,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       fontSize: '2.3rem',
       backgroundImage:
-        'linear-gradient(to bottom, #8a3ab9,#bc2a8d,#e95950,#fbad50)',
+        'linear-gradient(to bottom left, #8a3ab9,#bc2a8d,#e95950,#fbad50)',
+      borderRadius: '0.6rem',
     },
   },
   fbIcon: {
@@ -44,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '2.3rem',
       color: '#4267B2',
       backgroundColor: 'white',
+      borderRadius: '0.6rem',
     },
   },
   YTicon: {
@@ -51,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '2.3rem',
       color: '#FF0000',
       backgroundColor: 'white',
+      borderRadius: '0.6rem',
     },
   },
   MailIcon: {
@@ -58,23 +62,30 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '2.3rem',
       color: '#FF0000',
       backgroundColor: 'white',
+      borderRadius: '0.6rem',
     },
   },
   socialMediaIconButton: {
     color: 'white',
   },
   devLogo: {
-    height: '25vh',
-    marginTop: '-1.5rem',
+    height: '15vh',
+    // marginTop: '-1.5rem',
   },
   companyLogo: {
-    maxHeight: '25vh',
+    maxHeight: '20vh',
     maxWidth: '75%',
   },
 }));
 
 export default function Info() {
   let classes = useStyles();
+
+  function copyToClipboard() {
+    navigator.clipboard.writeText('mlrliterati@gmail.com');
+    alert('Mail Address Copied ');
+  }
+
   return (
     <React.Fragment>
       <span>
@@ -83,16 +94,40 @@ export default function Info() {
       <div className={classes.root}>
         <div>
           <Typography>FOLLOW US ON</Typography>
-          <IconButton className={classes.socialMediaIconButton}>
-            <Instagram fontSize='large' className={classes.InstaIcon} />
-          </IconButton>
-          <IconButton className={classes.socialMediaIconButton}>
-            <Facebook fontSize='large' className={classes.fbIcon} />
-          </IconButton>
-          <IconButton className={classes.socialMediaIconButton}>
-            <YouTube fontSize='large' className={classes.YTicon} />
-          </IconButton>
-          <IconButton className={classes.socialMediaIconButton}>
+          <Link
+            href='https://instagram.com/mlrclubliterati?utm_medium=copy_link'
+            target='_blank'
+            rel='noopener'
+            color='inherit'
+          >
+            <IconButton className={classes.socialMediaIconButton}>
+              <Instagram fontSize='large' className={classes.InstaIcon} />
+            </IconButton>
+          </Link>
+          <Link
+            href='https://www.facebook.com/mlrclubliterati/'
+            target='_blank'
+            rel='noopener'
+            color='inherit'
+          >
+            <IconButton className={classes.socialMediaIconButton}>
+              <Facebook fontSize='large' className={classes.fbIcon} />
+            </IconButton>
+          </Link>
+          <Link
+            href='https://youtube.com/channel/UCQ_QmaXV0yAg18r6oIyiakw'
+            target='_blank'
+            rel='noopener'
+            color='inherit'
+          >
+            <IconButton className={classes.socialMediaIconButton}>
+              <YouTube fontSize='large' className={classes.YTicon} />
+            </IconButton>
+          </Link>
+          <IconButton
+            className={classes.socialMediaIconButton}
+            onClick={copyToClipboard}
+          >
             <MailOutline fontSize='large' className={classes.MailIcon} />
           </IconButton>
         </div>
@@ -101,7 +136,18 @@ export default function Info() {
           <Hidden smUp>
             <Grid container>
               <Grid item xs={12} md={3}>
-                <img src={myLogo} alt='dev logo' className={classes.devLogo} />
+                <Link
+                  href='https://www.linkedin.com/in/mb2052'
+                  target='_blank'
+                  rel='noopener'
+                  color='inherit'
+                >
+                  <img
+                    src={myLogo}
+                    alt='dev logo'
+                    className={classes.devLogo}
+                  />
+                </Link>
               </Grid>
               <Grid item xs={12} style={{ marginTop: '-1.5rem' }}>
                 <Typography>for</Typography>
@@ -118,8 +164,20 @@ export default function Info() {
           <Hidden smDown>
             <div style={{ display: 'flex' }}>
               <div style={{ marginLeft: '30%' }}>
-                <img src={myLogo} alt='dev logo' className={classes.devLogo} />
+                <Link
+                  href='https://www.linkedin.com/in/mb2052'
+                  target='_blank'
+                  rel='noopener'
+                  color='inherit'
+                >
+                  <img
+                    src={myLogo}
+                    alt='dev logo'
+                    className={classes.devLogo}
+                  />
+                </Link>
               </div>
+
               <div>
                 <Typography style={{ marginTop: '2rem' }}>for</Typography>
               </div>

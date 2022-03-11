@@ -13,15 +13,11 @@ let registrationsCount = (
   <CountUp end={1000} suffix={'+'} duration={5}></CountUp>
 );
 let prizeMCount = <CountUp end={30} suffix={'K+'} duration={3}></CountUp>;
-let sponsorsCount = <CountUp end={30} suffix={'+'} duration={3}></CountUp>;
+let sponsorsCount = <CountUp end={10} suffix={'+'} duration={3}></CountUp>;
 
 let Highlights = () => {
   return (
     <React.Fragment>
-      <div>
-        <Typography variant='h5'>Highlights</Typography>
-      </div>
-      <Divider />
       <Grid container>
         <CountCard
           count={participationCount}
