@@ -93,7 +93,12 @@ export default function Info() {
       </span>
       <div className={classes.root}>
         <div>
-          <Typography>FOLLOW US ON</Typography>
+          <Typography
+            variant='h6'
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            FOLLOW US ON
+          </Typography>
           <Link
             href='https://instagram.com/mlrclubliterati?utm_medium=copy_link'
             target='_blank'
@@ -132,7 +137,12 @@ export default function Info() {
           </IconButton>
         </div>
         <div style={{ marginTop: '2rem' }}>
-          <Typography>DEVELOPER</Typography>
+          <Typography
+            variant='h6'
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            DEVELOPER
+          </Typography>
           <Hidden smUp>
             <Grid container>
               <Grid item xs={12} md={3}>
@@ -145,7 +155,8 @@ export default function Info() {
                   <img
                     src={myLogo}
                     alt='dev logo'
-                    className={classes.devLogo}
+                    // className={classes.devLogo}
+                    style={{ height: '15vh', marginTop: '-1rem' }}
                   />
                 </Link>
               </Grid>
