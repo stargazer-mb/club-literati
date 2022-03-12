@@ -6,6 +6,7 @@ import Events from './events';
 import Highlights from './highlights';
 import Gallery from '../components/Reusable Components/gallery';
 import Registration from './registrations';
+import clsx from 'clsx';
 
 import './litFest.css';
 
@@ -24,7 +25,36 @@ import img12 from '../resources/imgs/lit fest/Gallery/12.JPG';
 import img13 from '../resources/imgs/lit fest/Gallery/13.JPG';
 import img14 from '../resources/imgs/lit fest/Gallery/14.JPG';
 
-const useStyles = makeStyles((theme) => ({}));
+import underLine from '../resources/aesthetics/ul_black.png';
+
+const useStyles = makeStyles((theme) => ({
+  heading: {
+    textAlign: 'center',
+    fontFamily: 'Poppins, sans-serif',
+    fontSize: '1.5rem',
+    marginBlock: '1rem',
+  },
+  underLine: {
+    maxWidth: '80%',
+    marginTop: '-1rem',
+    marginBottom: '1rem',
+  },
+  btnIdle: {
+    backgroundColor: '#1b5e20',
+    color: '#ffca28',
+  },
+  btnSelect: {
+    backgroundColor: '#ffca28',
+    color: '#1b5e20',
+  },
+  btnTxtSelect: {
+    fontFamily: 'Poppins,sans-serif',
+    padding: '0.5rem',
+  },
+  btnTxtIdle: {
+    fontFamily: 'Poppins,sans-serif',
+  },
+}));
 
 function LitFest() {
   const classes = useStyles();
@@ -85,34 +115,60 @@ function LitFest() {
       <div id='inPgNavContainer'>
         <div id='inPgNav'>
           <Paper elevation={0} id='inPgNavBtn'>
-            <Button color='primary' variant='contained' onClick={handleAbout}>
-              About
+            <Button
+              variant='contained'
+              onClick={handleAbout}
+              className={about ? classes.btnSelect : classes.btnIdle}
+            >
+              <Typography
+                className={about ? classes.btnTxtSelect : classes.btnTxtIdle}
+              >
+                ABOUT
+              </Typography>
             </Button>
           </Paper>
 
           <Paper elevation={0} id='inPgNavBtn'>
             <Button
-              color='primary'
               variant='contained'
               onClick={handleRegister}
+              className={register ? classes.btnSelect : classes.btnIdle}
             >
-              Register
+              <Typography
+                className={register ? classes.btnTxtSelect : classes.btnTxtIdle}
+              >
+                REGISTER
+              </Typography>
             </Button>
           </Paper>
 
           <Paper elevation={0} id='inPgNavBtn'>
             <Button
-              color='primary'
               variant='contained'
               onClick={handleHighlights}
+              className={highlights ? classes.btnSelect : classes.btnIdle}
             >
-              Highlights
+              <Typography
+                className={
+                  highlights ? classes.btnTxtSelect : classes.btnTxtIdle
+                }
+              >
+                HIGHLIGHTS
+              </Typography>
             </Button>
           </Paper>
 
           <Paper elevation={0} id='inPgNavBtn'>
-            <Button color='primary' variant='contained' onClick={handleGallery}>
-              Gallery
+            <Button
+              variant='contained'
+              onClick={handleGallery}
+              className={gallery ? classes.btnSelect : classes.btnIdle}
+            >
+              <Typography
+                className={gallery ? classes.btnTxtSelect : classes.btnTxtIdle}
+              >
+                GALLERY
+              </Typography>
             </Button>
           </Paper>
         </div>
@@ -120,7 +176,20 @@ function LitFest() {
 
       {about ? (
         <React.Fragment>
-          <Typography>Literary Events</Typography>
+          <Typography className={classes.heading}>Literary Events</Typography>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src={underLine}
+              alt='under line'
+              className={classes.underLine}
+            />
+          </div>
           <Events />
         </React.Fragment>
       ) : (
@@ -128,9 +197,20 @@ function LitFest() {
       )}
       {gallery ? (
         <React.Fragment>
-          <Typography paragraph>
-            Gallery <br />
-          </Typography>
+          <Typography className={classes.heading}>Gallery</Typography>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src={underLine}
+              alt='under line'
+              className={classes.underLine}
+            />
+          </div>
           <Gallery
             imgList={[
               img1,
@@ -155,7 +235,20 @@ function LitFest() {
       )}
       {highlights ? (
         <React.Fragment>
-          <Typography>Highlights</Typography>
+          <Typography className={classes.heading}>Highlights</Typography>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src={underLine}
+              alt='under line'
+              className={classes.underLine}
+            />
+          </div>
           <Highlights />
         </React.Fragment>
       ) : (
@@ -163,7 +256,20 @@ function LitFest() {
       )}
       {register ? (
         <React.Fragment>
-          <Typography>Registrations</Typography>
+          <Typography className={classes.heading}>Registrations</Typography>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src={underLine}
+              alt='under line'
+              className={classes.underLine}
+            />
+          </div>
           <Registration />
         </React.Fragment>
       ) : (
