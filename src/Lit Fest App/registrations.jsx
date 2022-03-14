@@ -18,6 +18,9 @@ let useStyles = makeStyles((theme) => ({
       fontSize: '0.9rem',
     },
   },
+  btntxt: {
+    fontFamily: 'Poppins, sans-serif',
+  },
 }));
 
 function Registration() {
@@ -32,7 +35,9 @@ function Registration() {
             rel='noopener'
             color='inherit'
           >
-            <Paper className={classes.button}>Art Gallery</Paper>
+            <Paper className={classes.button}>
+              <Typography className={classes.btntxt}>Art Gallery</Typography>{' '}
+            </Paper>
           </Link>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -42,7 +47,11 @@ function Registration() {
             rel='noopener'
             color='inherit'
           >
-            <Paper className={classes.button}>Individual Events</Paper>
+            <Paper className={classes.button}>
+              <Typography className={classes.btntxt}>
+                Individual Events
+              </Typography>
+            </Paper>
           </Link>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -52,7 +61,9 @@ function Registration() {
             rel='noopener'
             color='inherit'
           >
-            <Paper className={classes.button}>Group Events</Paper>
+            <Paper className={classes.button}>
+              <Typography className={classes.btntxt}>Group Events</Typography>
+            </Paper>
           </Link>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -62,7 +73,9 @@ function Registration() {
             rel='noopener'
             color='inherit'
           >
-            <Paper className={classes.button}>Event Brochure</Paper>
+            <Paper className={classes.button}>
+              <Typography className={classes.btntxt}>Event Brochure</Typography>
+            </Paper>
           </Link>
         </Grid>
       </Grid>
