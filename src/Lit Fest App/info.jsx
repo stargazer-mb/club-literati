@@ -190,7 +190,14 @@ export default function Info() {
               </div>
 
               <div>
-                <Typography style={{ marginTop: '2rem' }}>for</Typography>
+                <Typography
+                  style={{
+                    marginTop: '2rem',
+                    fontFamily: 'Poppins, sans-serif',
+                  }}
+                >
+                  for
+                </Typography>
               </div>
               <div>
                 <img

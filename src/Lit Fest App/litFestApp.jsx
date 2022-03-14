@@ -83,13 +83,31 @@ export default function LitFestApp() {
             >
               <Typography
                 style={{
-                  fontFamily: 'Permanent Marker, cursive',
-                  fontSize: '1.4rem',
+                  fontFamily: 'Kaushan Script, cursive',
+                  fontSize: '1.2rem',
                   fontWeight: '100',
                 }}
               >
                 Uninterrupted joyous festivities power-packed into a one-day
-                glorious event presented by your very own <br /> CLUB LITERATI
+                glorious event.
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: 'Kaushan Script, cursive',
+                  fontSize: '1.4rem',
+                  fontWeight: '700',
+                }}
+              >
+                CLUB LITERATI
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: 'Kaushan Script, cursive',
+                  fontSize: '1.2rem',
+                  fontWeight: '100',
+                }}
+              >
+                presents the 3rd edition of
               </Typography>
               {/* <div
                 style={{
@@ -174,8 +192,16 @@ export default function LitFestApp() {
               >
                 <AnimatedText
                   txt={<Timer ddmmyyyy='26032022' />}
-                  variant='h2'
-                  colors={['#ee9ca7', '#ffdde1', '#2193b0', '#6dd5ed']}
+                  variant='h1'
+                  // colors={['#ee9ca7', '#ffdde1', '#2193b0', '#6dd5ed']}
+                  colors={[
+                    '#FFCDDD',
+                    '#ee9ca7',
+                    '#FF008E',
+                    '#D22779',
+                    '#612897',
+                    '#0C1E7F',
+                  ]}
                 />
               </div>
             </div>

@@ -26,7 +26,7 @@ export default function Events() {
           content='Make the most compelling story with four pictures and wipe the floor with fellow competitors! '
           image={TaleOfFourImg}
           bgColor='#e1f5fe'
-          fontColor='#1a237e'
+          fontColor='#04009A'
         />
         <EventCard
           title='Litrivia'
