@@ -138,9 +138,9 @@ export default function LitFestApp() {
                   <Grid item xs={12} md={5} style={{ paddingBottom: '0.5rem' }}>
                     <Typography
                       style={{
-                        fontFamily: 'Permanent Marker, cursive',
+                        fontFamily: 'Poppins,sans-serif',
                         fontSize: '1.4rem',
-                        fontWeight: '100',
+                        fontWeight: '600',
                         color: 'black',
                       }}
                     >
@@ -161,16 +161,16 @@ export default function LitFestApp() {
                   <Grid item xs={12} md={3} style={{ paddingBottom: '0.5rem' }}>
                     <Typography
                       style={{
-                        fontFamily: 'Permanent Marker, cursive',
+                        fontFamily: 'Poppins,sans-serif',
                         fontSize: '1.4rem',
-                        fontWeight: '100',
+                        fontWeight: '600',
                         color: 'black',
                       }}
                     >
                       <Link href='' rel='noopener' color='inherit'>
                         <Event
                           fontSize='inherit'
-                          style={{ marginBottom: '-0.1rem' }}
+                          style={{ marginBottom: '-0.2rem' }}
                         />
                         {' 26-03-2022'}
                       </Link>

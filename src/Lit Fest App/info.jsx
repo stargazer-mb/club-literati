@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   InstaIcon: {
     // margin: '0.25rem',
     '&:hover': {
-      fontSize: '2.3rem',
+      marginBottom: '0.2rem',
       backgroundImage:
         'linear-gradient(to bottom left, #8a3ab9,#bc2a8d,#e95950,#fbad50)',
       borderRadius: '0.6rem',
@@ -43,7 +43,8 @@ const useStyles = makeStyles((theme) => ({
   },
   fbIcon: {
     '&:hover': {
-      fontSize: '2.3rem',
+      // fontSize: '2.3rem',
+      marginBottom: '0.2rem',
       color: '#4267B2',
       backgroundColor: 'white',
       borderRadius: '0.6rem',
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
   YTicon: {
     '&:hover': {
-      fontSize: '2.3rem',
+      marginBottom: '0.2rem',
       color: '#FF0000',
       backgroundColor: 'white',
       borderRadius: '0.6rem',
@@ -59,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   },
   MailIcon: {
     '&:hover': {
-      fontSize: '2.3rem',
+      marginBottom: '0.2rem',
       color: '#FF0000',
       backgroundColor: 'white',
       borderRadius: '0.6rem',
@@ -143,7 +144,20 @@ export default function Info() {
           >
             DEVELOPER
           </Typography>
-          <Hidden smUp>
+          <Link
+            href='https://www.linkedin.com/in/mb2052'
+            target='_blank'
+            rel='noopener'
+            color='inherit'
+          >
+            <img
+              src={myLogo}
+              alt='dev logo'
+              // className={classes.devLogo}
+              style={{ height: '15vh', marginTop: '-1rem' }}
+            />
+          </Link>
+          {/* <Hidden smUp>
             <Grid container>
               <Grid item xs={12} md={3}>
                 <Link
@@ -207,7 +221,7 @@ export default function Info() {
                 />
               </div>
             </div>
-          </Hidden>
+          </Hidden> */}
         </div>
       </div>
     </React.Fragment>
