@@ -68,7 +68,7 @@ function Registration() {
         </Grid>
         <Grid item xs={12} md={6}>
           <Link
-            href='https://drive.google.com/file/d/1YturquQ13PaCLED_axxFrv964bnI_o92/view?usp=sharing'
+            href='https://drive.google.com/file/d/1ZaOVBVKWH-HXKafU3lVsnbnDyNZvzej3/view'
             target='_blank'
             rel='noopener'
             color='inherit'
