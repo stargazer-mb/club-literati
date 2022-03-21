@@ -83,7 +83,7 @@ export default function LitFestApp() {
             >
               <Typography
                 style={{
-                  fontFamily: 'Kaushan Script, cursive',
+                  fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.2rem',
                   fontWeight: '100',
                 }}
@@ -102,7 +102,7 @@ export default function LitFestApp() {
               </Typography>
               <Typography
                 style={{
-                  fontFamily: 'Kaushan Script, cursive',
+                  fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.2rem',
                   fontWeight: '100',
                 }}
